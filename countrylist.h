@@ -1,21 +1,18 @@
 #include <iostream>
-#include <string>
 #include <cstring>
 #include "country.h"
 
-#ifndef COUNTRYLIST
-#define COUNTRYLIST
-
 using namespace std;
 
-class CountryList {
+class CountryList
+{
 		Country *head;
 	public:
 		CountryList();
 		~CountryList();
-		void addCountry(int k, const char *n, long p);
+		void addCountry(int k, const char* n, long p);
 		void removeCountry(int k);
 		void displayList();
+		CountryList(const CountryList &x);
+		CountryList& operator=(const CountryList& x);
 };
-
-#endif
